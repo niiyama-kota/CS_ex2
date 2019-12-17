@@ -1,0 +1,161 @@
+* inv
+.subckt inv In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=2u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=4u
+.ends
+
+.subckt invp2 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=4u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=8u
+.ends
+
+.subckt invp3 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=6u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=12u
+.ends
+
+.subckt invp4 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=8u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=16u
+.ends
+
+.subckt invp6 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=12u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=24u
+.ends
+
+.subckt invp8 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=16u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=32u
+.ends
+
+.subckt invp16 In Out Vdd
+m1	Out In 0 0	cmosn l=0.25u w=32u
+m2	Out In Vdd Vdd	cmosp l=0.25u w=64u
+.ends
+
+* nand2
+.subckt nand2 In1 In2 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=4u
+m2	N1 In2 0 0	cmosn l=0.25u w=4u
+m3	Out In1 Vdd Vdd	cmosp l=0.25u w=4u
+m4	Out In2 Vdd Vdd	cmosp l=0.25u w=4u
+.ends
+
+.subckt nand2p2 In1 In2 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=8u
+m2	N1 In2 0 0	cmosn l=0.25u w=8u
+m3	Out In1 Vdd Vdd	cmosp l=0.25u w=8u
+m4	Out In2 Vdd Vdd	cmosp l=0.25u w=8u
+.ends
+
+.subckt nand2p3 In1 In2 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=12u
+m2	N1 In2 0 0	cmosn l=0.25u w=12u
+m3	Out In1 Vdd Vdd	cmosp l=0.25u w=12u
+m4	Out In2 Vdd Vdd	cmosp l=0.25u w=12u
+.ends
+
+.subckt nand2p4 In1 In2 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=16u
+m2	N1 In2 0 0	cmosn l=0.25u w=16u
+m3	Out In1 Vdd Vdd	cmosp l=0.25u w=16u
+m4	Out In2 Vdd Vdd	cmosp l=0.25u w=16u
+.ends
+
+* nor2
+.subckt nor2 In1 In2 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=2u
+m2	Out In2 0 0	cmosn l=0.25u w=2u
+m3	Out In1 N1 Vdd	cmosp l=0.25u w=8u
+m4	N1 In2 Vdd Vdd	cmosp l=0.25u w=8u
+.ends
+
+.subckt nor2p2 In1 In2 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=4u
+m2	Out In2 0 0	cmosn l=0.25u w=4u
+m3	Out In1 N1 Vdd	cmosp l=0.25u w=16u
+m4	N1 In2 Vdd Vdd	cmosp l=0.25u w=16u
+.ends
+
+.subckt nor2p3 In1 In2 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=6u
+m2	Out In2 0 0	cmosn l=0.25u w=6u
+m3	Out In1 N1 Vdd	cmosp l=0.25u w=24u
+m4	N1 In2 Vdd Vdd	cmosp l=0.25u w=24u
+.ends
+
+.subckt nor2p4 In1 In2 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=8u
+m2	Out In2 0 0	cmosn l=0.25u w=8u
+m3	Out In1 N1 Vdd	cmosp l=0.25u w=32u
+m4	N1 In2 Vdd Vdd	cmosp l=0.25u w=32u
+.ends
+
+* nand4
+.subckt nand4 In1 In2 In3 In4 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=8u
+m2	N1 In2 N2 0	cmosn l=0.25u w=8u
+m3	N2 In3 N3 0	cmosn l=0.25u w=8u
+m4	N3 In4 0 0	cmosn l=0.25u w=8u
+m5	Out In1 Vdd Vdd	cmosp l=0.25u w=4u
+m6	Out In2 Vdd Vdd	cmosp l=0.25u w=4u
+m7	Out In3 Vdd Vdd	cmosp l=0.25u w=4u
+m8	Out In4 Vdd Vdd	cmosp l=0.25u w=4u
+.ends
+
+.subckt nand4p2 In1 In2 In3 In4 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=16u
+m2	N1 In2 N2 0	cmosn l=0.25u w=16u
+m3	N2 In3 N3 0	cmosn l=0.25u w=16u
+m4	N3 In4 0 0	cmosn l=0.25u w=16u
+m5	Out In1 Vdd Vdd	cmosp l=0.25u w=8u
+m6	Out In2 Vdd Vdd	cmosp l=0.25u w=8u
+m7	Out In3 Vdd Vdd	cmosp l=0.25u w=8u
+m8	Out In4 Vdd Vdd	cmosp l=0.25u w=8u
+.ends
+
+.subckt nand4p4 In1 In2 In3 In4 Out Vdd
+m1	Out In1 N1 0	cmosn l=0.25u w=32u
+m2	N1 In2 N2 0	cmosn l=0.25u w=32u
+m3	N2 In3 N3 0	cmosn l=0.25u w=32u
+m4	N3 In4 0 0	cmosn l=0.25u w=32u
+m5	Out In1 Vdd Vdd	cmosp l=0.25u w=16u
+m6	Out In2 Vdd Vdd	cmosp l=0.25u w=16u
+m7	Out In3 Vdd Vdd	cmosp l=0.25u w=16u
+m8	Out In4 Vdd Vdd	cmosp l=0.25u w=16u
+.ends
+
+* nor4
+.subckt nor4 In1 In2 In3 In4 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=2u
+m2	Out In2 0 0	cmosn l=0.25u w=2u
+m3	Out In3 0 0	cmosn l=0.25u w=2u
+m4	Out In4 0 0	cmosn l=0.25u w=2u
+m5	Out In1 N1 Vdd	cmosp l=0.25u w=16u
+m6	N1 In2 N2 Vdd	cmosp l=0.25u w=16u
+m7	N2 In3 N3 Vdd	cmosp l=0.25u w=16u
+m8	N3 In4 Vdd Vdd	cmosp l=0.25u w=16u
+.ends
+
+.subckt nor4p2 In1 In2 In3 In4 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=4u
+m2	Out In2 0 0	cmosn l=0.25u w=4u
+m3	Out In3 0 0	cmosn l=0.25u w=4u
+m4	Out In4 0 0	cmosn l=0.25u w=4u
+m5	Out In1 N1 Vdd	cmosp l=0.25u w=32u
+m6	N1 In2 N2 Vdd	cmosp l=0.25u w=32u
+m7	N2 In3 N3 Vdd	cmosp l=0.25u w=32u
+m8	N3 In4 Vdd Vdd	cmosp l=0.25u w=32u
+.ends
+
+.subckt nor4p4 In1 In2 In3 In4 Out Vdd
+m1	Out In1 0 0	cmosn l=0.25u w=8u
+m2	Out In2 0 0	cmosn l=0.25u w=8u
+m3	Out In3 0 0	cmosn l=0.25u w=8u
+m4	Out In4 0 0	cmosn l=0.25u w=8u
+m5	Out In1 N1 Vdd	cmosp l=0.25u w=64u
+m6	N1 In2 N2 Vdd	cmosp l=0.25u w=64u
+m7	N2 In3 N3 Vdd	cmosp l=0.25u w=64u
+m8	N3 In4 Vdd Vdd	cmosp l=0.25u w=64u
+.ends

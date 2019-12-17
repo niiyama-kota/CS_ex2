@@ -1,0 +1,55 @@
+* sample.cir
+***********************************************************************
+* Set supply and library
+***********************************************************************
+.INCLUDE mos_model3
+.options temp=55                * Nominal temperature
+* Save results of simulation for viewing
+.options post
+***********************************************************************
+* Define power supply
+***********************************************************************
+Vdd     Vdd     0       2.5
+***********************************************************************
+* Define Subcircuits
+***********************************************************************
+.subckt inv In Out Vdd
+m1      Out In 0 0      cmosn l=0.25u w=2u
+m2      Out In Vdd Vdd  cmosp l=0.25u w=4u
+.ends
+.subckt inva In Out Vdd
+m1      Out In 0 0      cmosn l=0.25u w=4u
+m2      Out In Vdd Vdd  cmosp l=0.25u w=8u
+.ends
+.subckt invb In Out Vdd
+m1      Out In 0 0      cmosn l=0.25u w=16u
+m2      Out In Vdd Vdd  cmosp l=0.25u w=32u
+.ends
+.subckt invc In Out Vdd
+m1      Out In 0 0      cmosn l=0.25u w=64u
+m2      Out In Vdd Vdd  cmosp l=0.25u w=128u
+.ends
+***********************************************************************
+* Stimulus
+***********************************************************************
+* Format of pulse input:
+* pulse v_initial v_final t_delay t_rise t_fall t_pulsewidth t_period
+Vin     In      0       PULSE(0 2.5 1ns 0.1ns 0.1ns 4ns 10ns)
+***********************************************************************
+* Top level simulation netlist
+***********************************************************************
+* ??? Add more of the netlist here
+x1      In      a       Vdd     inv
+x2      a       b       Vdd     inva
+r1      b       c       1k
+c1      c       0       100f
+r2      c       Out     1k
+x4      Out     d       Vdd     invb
+x5      d       e       Vdd     invc
+.tran .001ns 12ns
+.plot TRAN V(In) V(a) V(b) V(c) V(Out) V(d) V(e)
+***********************************************************************
+* End of Deck
+***********************************************************************
+.end
+
