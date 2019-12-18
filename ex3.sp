@@ -24,5 +24,5 @@ X5 in1_and in2_and in3_and in4_and out_nand Vdd nand4
 X6 out_nand out Vdd inv
 c1 out 0 500f
 
-.tran 0.1n 400n
+.tran 0.1n 500n
 .end
