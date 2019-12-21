@@ -11,4 +11,6 @@ r1 out 0 10.0k
 
 
 .tran 0.1u 300u
+.measure tran vMax FIND v(out) WHEN time=100.5u
+
 .end

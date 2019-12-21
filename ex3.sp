@@ -25,4 +25,12 @@ X6 out_nand out Vdd inv
 c1 out 0 500f
 
 .tran 0.1n 500n
+.measure tran teval1 WHEN v(out)=1.25 CROSS=1
+.measure tran teval2 WHEN v(out)=1.25 CROSS=2
+.measure tran teval3 WHEN v(out)=1.25 CROSS=3
+.measure tran teval4 WHEN v(out)=1.25 CROSS=4
+.measure tran teval5 WHEN v(out)=1.25 CROSS=5
+.measure tran teval6 WHEN v(out)=1.25 CROSS=6
+.measure tran teval7 WHEN v(out)=1.25 CROSS=7
+.measure tran teval8 WHEN v(out)=1.25 CROSS=8
 .end

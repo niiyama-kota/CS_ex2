@@ -11,4 +11,5 @@ r1 in out 10.0k
 
 
 .tran 0.1u 300u
+.measure tran teval WHEN v(out)=1.575
 .end
