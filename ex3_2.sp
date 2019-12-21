@@ -25,12 +25,37 @@ X7 out_nand1 out_nand2 out Vdd nor2
 c1 out 0 500f
 
 .tran 0.1n 500n
-.measure tran teval1 WHEN v(out)=1.25 CROSS=1
-.measure tran teval2 WHEN v(out)=1.25 CROSS=2
-.measure tran teval3 WHEN v(out)=1.25 CROSS=3
-.measure tran teval4 WHEN v(out)=1.25 CROSS=4
-.measure tran teval5 WHEN v(out)=1.25 CROSS=5
-.measure tran teval6 WHEN v(out)=1.25 CROSS=6
-.measure tran teval7 WHEN v(out)=1.25 CROSS=7
-.measure tran teval8 WHEN v(out)=1.25 CROSS=8
+
+.control
+set hcopydevtype=postscript
+set hcopypscolor=1
+set color0=rgb:0/0/0
+run
+hardcopy ex3_2.ps v(out)
+meas tran teval1 WHEN v(out)=1.25 CROSS=1
+meas tran teval2 WHEN v(out)=1.25 CROSS=2
+meas tran teval3 WHEN v(out)=1.25 CROSS=3
+meas tran teval4 WHEN v(out)=1.25 CROSS=4
+meas tran teval5 WHEN v(out)=1.25 CROSS=5
+meas tran teval6 WHEN v(out)=1.25 CROSS=6
+meas tran teval7 WHEN v(out)=1.25 CROSS=7
+meas tran teval8 WHEN v(out)=1.25 CROSS=8
+let delta1=teval1-50.0n
+print delta1
+let delta2=teval2-100.0n
+print delta2
+let delta3=teval3-150.0n
+print delta3
+let delta4=teval4-200.0n
+print delta4
+let delta5=teval5-250.0n
+print delta5
+let delta6=teval6-300.0n
+print delta6
+let delta7=teval7-350.0n
+print delta7
+let delta8=teval8-400.0n
+print delta8
+.endc
+
 .end

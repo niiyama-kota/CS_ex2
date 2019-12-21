@@ -16,6 +16,19 @@ c1 out 0 30f
 
 
 .tran 0.1n 300n
-.measure tran teval WHEN v(out)=1.25 CROSS=1
-.measure tran teval WHEN v(out)=1.25 CROSS=2
+
+.control
+set hcopydevtype=postscript
+set hcopypscolor=1
+set color0=rgb:0/0/0
+run
+hardcopy ex2_1.ps v(out)
+meas tran teval1 WHEN v(out)=1.25 CROSS=1
+let delta1=teval1-100n
+print delta1
+meas tran teval2 WHEN v(out)=1.25 CROSS=2
+let delta2=teval2-200n
+print delta2
+.endc
+
 .end

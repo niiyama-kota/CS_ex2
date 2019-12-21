@@ -11,5 +11,19 @@ r1 in out 10.0k
 
 
 .tran 0.1u 300u
-.measure tran teval WHEN v(out)=1.575
+
+.control
+set hcopydevtype=postscript
+set hcopypscolor=1
+set color0=rgb:0/0/0
+run
+hardcopy ex1_integral.ps v(out)
+*vMid is 63% of the amp
+let vMid=2.5*0.63
+*teval2 is the time when v indicate vMid
+meas tran teval2 WHEN v(out)=vMid
+let delta=teval2-100.0u
+print delta
+.endc
+
 .end
