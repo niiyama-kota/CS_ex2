@@ -1,4 +1,4 @@
-* ex1_RC.sp
+* ex1_dif.sp
 .options post temp=27
 
 v1 in 0 pwl ( 0.0u 0.0

@@ -14,7 +14,6 @@ v4 in4 0 pwl ( 0.0n 0.0 349.5n 0.0 350.5n 2.5 399.5n 2.5 400.5n 0.0 )
 
 vc Vdd 0 2.5v
 
-v125 out125 0 1.25v
 
 X1 in1 in1_and Vdd inv
 X2 in2 in2_and Vdd inv

@@ -16,4 +16,6 @@ c1 out 0 30f
 
 
 .tran 0.1n 300n
+.measure tran teval WHEN v(out)=1.25 CROSS=1
+.measure tran teval WHEN v(out)=1.25 CROSS=2
 .end

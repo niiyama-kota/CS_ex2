@@ -14,7 +14,6 @@ v4 in4 0 pwl ( 0.0n 0.0 349.5n 0.0 350.5n 2.5 399.5n 2.5 400.5n 0.0 )
 
 vc Vdd 0 2.5v
 
-v125 out125 0 1.25v
 
 X1 in1 in1_and Vdd inv
 X2 in2 in2_and Vdd inv
@@ -26,4 +25,12 @@ X7 out_nand1 out_nand2 out Vdd nor2
 c1 out 0 500f
 
 .tran 0.1n 500n
+.measure tran teval1 WHEN v(out)=1.25 CROSS=1
+.measure tran teval2 WHEN v(out)=1.25 CROSS=2
+.measure tran teval3 WHEN v(out)=1.25 CROSS=3
+.measure tran teval4 WHEN v(out)=1.25 CROSS=4
+.measure tran teval5 WHEN v(out)=1.25 CROSS=5
+.measure tran teval6 WHEN v(out)=1.25 CROSS=6
+.measure tran teval7 WHEN v(out)=1.25 CROSS=7
+.measure tran teval8 WHEN v(out)=1.25 CROSS=8
 .end

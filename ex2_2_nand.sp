@@ -1,4 +1,4 @@
-*ex2_2_inv
+*ex2_2_nand
 .options post temp=27
 .include mos_model3
 .include logic.cir
