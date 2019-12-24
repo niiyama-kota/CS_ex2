@@ -56,6 +56,12 @@ let delta7=teval7-350.0n
 print delta7
 let delta8=teval8-400.0n
 print delta8
+<<<<<<< HEAD
+=======
+let average=(delta1+delta2+delta3
++ +delta4+delta5+delta6+delta7+delta8)/8
+print average
+>>>>>>> 6dfa4eb05102726ceb35e606bda3c87b3f7ca3c1
 .endc
 
 .end
